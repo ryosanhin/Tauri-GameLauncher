@@ -1,0 +1,23 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "fs-permissions",
+  "description": "Capability for file system",
+  "windows": [
+    "main"
+  ],
+  "permissions": [
+    "fs:default",
+    {
+        "identifier": "fs:allow-read-text-file",
+        "allow": [
+            {"path": "$RESOURCE/**/*.json"}
+        ]
+    },
+    {
+        "identifier": "fs:allow-read-file",
+        "allow": [
+            {"path": "$RESOURCE/**/*"}
+        ]
+    }
+  ]
+}
