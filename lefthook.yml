@@ -1,6 +1,6 @@
 pre-commit:
   commands:
-    check:
+    format:
       glob: "*.{ts,vue}"
-      run: pnpm check {staged_files}
+      run: pnpm format {staged_files}
       stage_fixed: true
